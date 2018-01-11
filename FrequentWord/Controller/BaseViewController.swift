@@ -27,7 +27,6 @@ class BaseViewController: UIViewController {
     func setupView() {
         
     }
-    
     private func showMessage(message: String) {
         let alertController = UIAlertController.init(title: nil, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction.init(title: "OK", style: .cancel, handler: nil))

@@ -11,13 +11,10 @@ import Foundation
 class SpeechStore: BaseStore {
     
     //MARK: - Methods
-    
     /**
      Requests and filters Doctors list near you.
-     
      - Parameter completion: Callback with the result array.
      - Parameter failure: Error callback.
-     
      */
     
     func getListOfSpeakers(completion success: @escaping UISuccessClosure,
@@ -29,7 +26,11 @@ class SpeechStore: BaseStore {
         }, speechFailureClosure: failure)
     }
     
-    
+    /**
+     Requests and filters Doctors list near you.
+     - Parameter text: required string to get the most frequent word.
+     - Parameter completion: Callback with the most frequent word.
+     */
     func getMostFrequentWordFromText(_ text: String?, completion success: @escaping MostFrequentStringClosure) {
         if let txt = text {
             DispatchQueue.global(qos: .background).async {
