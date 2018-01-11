@@ -14,14 +14,15 @@ class SpeechViewController: BaseViewController {
     
     @IBOutlet weak var speechTextView: UITextView!
     @IBOutlet weak var frequentWordLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     
     //MARK: - Properties
     var speaker: Speaker?
     
     //MARK: - ViewController Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         calculateMostFrequentWord()
     }
     override func setupView() {
@@ -33,9 +34,12 @@ class SpeechViewController: BaseViewController {
 
     //MARK: - Private Methods
     private func calculateMostFrequentWord() {
-        speechStore.getMostFrequentWordFromText(speaker?.speech) {[weak self] (mostFrequentString) in
+        speechStore.getMostFrequentWordFromText(speaker?.speech, progress: { [weak self] (progress) in
+            self?.progressBar.progress = progress
+        }) { [weak self](mostFrequentString) in
             self?.frequentWordLabel.text = "Most frequent word : \(mostFrequentString)"
         }
+
     }
     
 }

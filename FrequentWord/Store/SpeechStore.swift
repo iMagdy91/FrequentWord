@@ -28,16 +28,20 @@ class SpeechStore: BaseStore {
     
     /**
      Requests and filters Doctors list near you.
-     - Parameter text: required string to get the most frequent word.
+     - Parameter text: Required string to get the most frequent word.
+     - Parameter progress: Indicating the progress of word enumeration.
      - Parameter completion: Callback with the most frequent word.
      */
-    func getMostFrequentWordFromText(_ text: String?, completion success: @escaping MostFrequentStringClosure) {
+    func getMostFrequentWordFromText(_ text: String?, progress: @escaping ProgressClosure , completion success: @escaping MostFrequentStringClosure) {
         if let txt = text {
             DispatchQueue.global(qos: .background).async {
                 let arrayOfStrings = txt.words()
                 var timesOfOccuranceOfWord  = [String: Int]()
                 
-                for word in arrayOfStrings {
+                for (index, word) in arrayOfStrings.enumerated() {
+                        DispatchQueue.main.async {
+                            progress(Float(index * 100/arrayOfStrings.count))
+                        }
                     timesOfOccuranceOfWord[word] = (timesOfOccuranceOfWord[word] ?? 0) + 1
                 }
                 let decendingSortOfArray = timesOfOccuranceOfWord.sorted(by: ({$0.1 > $1.1}))
