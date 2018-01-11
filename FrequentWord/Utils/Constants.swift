@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import UIKit
+
+struct UITableViewCellIdentifier {
+    static let speakerCellIdentifier      = "SpeakerCell"
+}
+
+struct UITableViewConstants {
+    static let estimatedRowHeight:CGFloat = 100.0
+}
+
+struct SegueIdentifier {
+    static let showSpeechSegue            = "ShowSpeechViewController"
+}

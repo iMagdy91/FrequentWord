@@ -12,11 +12,7 @@ import ObjectMapper
 class SpeechDataManager:BaseStore, SpeechDataSource {
     
     //MARK: - Properties
-    private var dataSource          : RestaurantDataProvider? {
-        didSet {
-            dataSource?.delegate = self
-        }
-    }
+    private var dataSource          : SpeechDataProvider = SpeechDataProvider()
     private var speechModelClosure  : BusinessSuccessClosure?
     private var speechFailureClosure: ErrorClosure?
     
@@ -25,11 +21,11 @@ class SpeechDataManager:BaseStore, SpeechDataSource {
                   speechFailureClosure: @escaping ErrorClosure) {
         self.speechModelClosure     = speechModelClosure
         self.speechFailureClosure   = speechFailureClosure
-        dataSource = RestaurantDataProvider()
+        dataSource.delegate = self
     }
     
     //MARK: - SpeechDataSource Methods
-    func didReceiveRestaurantData(_ data: Any) {
+    func didReceiveData(_ data: Any) {
         parseDataIntoModel(data)
     }
     

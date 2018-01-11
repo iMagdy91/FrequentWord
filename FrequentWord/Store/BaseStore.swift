@@ -12,4 +12,5 @@ protocol BaseStore {
     typealias ErrorClosure              = (Error) -> Void
     typealias UISuccessClosure          = ([BaseModel]?) -> Void
     typealias BusinessSuccessClosure    = (BaseModel?) -> Void
+    typealias MostFrequentStringClosure = (String) ->Void
 }

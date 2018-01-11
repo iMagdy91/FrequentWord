@@ -28,4 +28,22 @@ class SpeechStore: BaseStore {
             }
         }, speechFailureClosure: failure)
     }
+    
+    
+    func getMostFrequentWordFromText(_ text: String?, completion success: @escaping MostFrequentStringClosure) {
+        if let txt = text {
+            DispatchQueue.global(qos: .background).async {
+                let arrayOfStrings = txt.words()
+                var timesOfOccuranceOfWord  = [String: Int]()
+                
+                for word in arrayOfStrings {
+                    timesOfOccuranceOfWord[word] = (timesOfOccuranceOfWord[word] ?? 0) + 1
+                }
+                let decendingSortOfArray = timesOfOccuranceOfWord.sorted(by: ({$0.1 > $1.1}))
+                DispatchQueue.main.async {
+                    success(decendingSortOfArray[0].0)
+                }
+            }
+        }
+    }
 }

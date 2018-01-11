@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,14 +18,112 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oc6-EC-ZKF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SpeakerCell" rowHeight="100" id="1q4-wl-34t" customClass="SpeakerTableViewCell" customModule="FrequentWord" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1q4-wl-34t" id="CzC-vA-9KC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qno-GM-vbV">
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbp-yA-t55">
+                                                    <rect key="frame" x="8" y="70.5" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Qno-GM-vbV" secondAttribute="trailing" constant="8" id="Goz-9n-DMj"/>
+                                                <constraint firstItem="Qno-GM-vbV" firstAttribute="top" secondItem="CzC-vA-9KC" secondAttribute="top" constant="8" id="W4d-9J-nZQ"/>
+                                                <constraint firstItem="Qno-GM-vbV" firstAttribute="leading" secondItem="CzC-vA-9KC" secondAttribute="leading" constant="8" id="ZA1-oe-EYQ"/>
+                                                <constraint firstItem="cbp-yA-t55" firstAttribute="top" secondItem="Qno-GM-vbV" secondAttribute="bottom" constant="41.5" id="hLb-ge-bmA"/>
+                                                <constraint firstItem="cbp-yA-t55" firstAttribute="leading" secondItem="CzC-vA-9KC" secondAttribute="leading" constant="8" id="jLZ-OD-6bl"/>
+                                                <constraint firstAttribute="bottom" secondItem="cbp-yA-t55" secondAttribute="bottom" constant="8" id="laX-BU-zpq"/>
+                                                <constraint firstAttribute="trailing" secondItem="cbp-yA-t55" secondAttribute="trailing" constant="8" id="nGB-yA-oI0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="speakerNameLabel" destination="Qno-GM-vbV" id="2cB-sw-YfL"/>
+                                            <outlet property="speechTimeLabel" destination="cbp-yA-t55" id="OVO-rr-oRr"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="7gG-nM-xqb"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9xC-lf-q75"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oc6-EC-ZKF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Dk-IS-rQW"/>
+                            <constraint firstItem="oc6-EC-ZKF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="78N-AZ-ob0"/>
+                            <constraint firstItem="oc6-EC-ZKF" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="M7q-5D-7C1"/>
+                            <constraint firstItem="oc6-EC-ZKF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cwP-2J-Bdj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Speakers" id="T5h-7s-bYu"/>
+                    <connections>
+                        <outlet property="tableView" destination="oc6-EC-ZKF" id="c7O-9f-uQN"/>
+                        <segue destination="eRC-vJ-BDj" kind="show" identifier="ShowSpeechViewController" id="8f7-mb-K5u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+            <point key="canvasLocation" x="608.79999999999995" y="133.5832083958021"/>
+        </scene>
+        <!--Speech View Controller-->
+        <scene sceneID="7kV-XG-LSr">
+            <objects>
+                <viewController id="eRC-vJ-BDj" customClass="SpeechViewController" customModule="FrequentWord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="61w-oH-Ip0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rlt-o2-9d3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="333.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Frequent Word : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sal-ZB-fTH">
+                                <rect key="frame" x="102" y="417.5" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rlt-o2-9d3" firstAttribute="height" secondItem="61w-oH-Ip0" secondAttribute="height" multiplier="0.5" id="8ep-JB-wqc"/>
+                            <constraint firstItem="Rlt-o2-9d3" firstAttribute="trailing" secondItem="V3d-fk-vBc" secondAttribute="trailing" id="Au8-OH-i5h"/>
+                            <constraint firstItem="Sal-ZB-fTH" firstAttribute="centerX" secondItem="V3d-fk-vBc" secondAttribute="centerX" id="Hyh-8u-Zlp"/>
+                            <constraint firstItem="Rlt-o2-9d3" firstAttribute="leading" secondItem="V3d-fk-vBc" secondAttribute="leading" id="Tw2-OD-Axo"/>
+                            <constraint firstItem="Rlt-o2-9d3" firstAttribute="top" secondItem="V3d-fk-vBc" secondAttribute="top" id="czf-ef-Or2"/>
+                            <constraint firstItem="Sal-ZB-fTH" firstAttribute="top" secondItem="Rlt-o2-9d3" secondAttribute="bottom" constant="20" id="g5H-ih-vWi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V3d-fk-vBc"/>
+                    </view>
+                    <connections>
+                        <outlet property="frequentWordLabel" destination="Sal-ZB-fTH" id="8IG-fa-Wgp"/>
+                        <outlet property="speechTextView" destination="Rlt-o2-9d3" id="hNu-Em-cMm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="udc-77-35x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1413.5999999999999" y="117.39130434782609"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F8x-vj-meT">

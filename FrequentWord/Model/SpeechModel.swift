@@ -13,7 +13,7 @@ import ObjectMapper
 class SpeechModel: BaseModel {
     
     // MARK: - Properties
-    private(set) var speeches          : [Speech]?
+    private(set) var speeches          : [Speaker]?
     
     /**
      Mapping from API
@@ -23,7 +23,7 @@ class SpeechModel: BaseModel {
     }
 }
 
-class Speech: BaseModel {
+class Speaker: BaseModel {
     // MARK: - Properties
     private(set) var name              : String?
     private(set) var date              : String?

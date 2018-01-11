@@ -24,6 +24,10 @@
 		79A158692007B3AF006A8A1F /* SpeechDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158682007B3AF006A8A1F /* SpeechDataManager.swift */; };
 		79A1586C2007BBDD006A8A1F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A1586B2007BBDD006A8A1F /* BaseViewController.swift */; };
 		79A1586E2007BC0F006A8A1F /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A1586D2007BC0F006A8A1F /* SpeakersViewController.swift */; };
+		79A158712007CAAF006A8A1F /* SpeakerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158702007CAAF006A8A1F /* SpeakerTableViewCell.swift */; };
+		79A158732007CBDD006A8A1F /* SpeakersViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158722007CBDD006A8A1F /* SpeakersViewController+UITableView.swift */; };
+		79A158752007D364006A8A1F /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158742007D364006A8A1F /* SpeechViewController.swift */; };
+		79A158772007DBCC006A8A1F /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158762007DBCC006A8A1F /* String+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		79A158682007B3AF006A8A1F /* SpeechDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechDataManager.swift; sourceTree = "<group>"; };
 		79A1586B2007BBDD006A8A1F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		79A1586D2007BC0F006A8A1F /* SpeakersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
+		79A158702007CAAF006A8A1F /* SpeakerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerTableViewCell.swift; sourceTree = "<group>"; };
+		79A158722007CBDD006A8A1F /* SpeakersViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpeakersViewController+UITableView.swift"; sourceTree = "<group>"; };
+		79A158742007D364006A8A1F /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
+		79A158762007DBCC006A8A1F /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		C99A116B84A85F502D1774DF /* Pods-FrequentWord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrequentWord.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FrequentWord/Pods-FrequentWord.debug.xcconfig"; sourceTree = "<group>"; };
 		FE9D555FBA47052568412717 /* Pods-FrequentWord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrequentWord.release.xcconfig"; path = "Pods/Target Support Files/Pods-FrequentWord/Pods-FrequentWord.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +183,7 @@
 		79A158532007AD15006A8A1F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				79A1586F2007C9BD006A8A1F /* Custom View */,
 				79A158542007AD18006A8A1F /* Storyboard */,
 			);
 			path = View;
@@ -200,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				79A158592007B0B6006A8A1F /* Constants.swift */,
+				79A158762007DBCC006A8A1F /* String+Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -236,8 +246,18 @@
 			children = (
 				79A1586B2007BBDD006A8A1F /* BaseViewController.swift */,
 				79A1586D2007BC0F006A8A1F /* SpeakersViewController.swift */,
+				79A158722007CBDD006A8A1F /* SpeakersViewController+UITableView.swift */,
+				79A158742007D364006A8A1F /* SpeechViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		79A1586F2007C9BD006A8A1F /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				79A158702007CAAF006A8A1F /* SpeakerTableViewCell.swift */,
+			);
+			path = "Custom View";
 			sourceTree = "<group>";
 		};
 		FA4A7CC02FB799B689CB8606 /* Frameworks */ = {
@@ -442,6 +462,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79A158752007D364006A8A1F /* SpeechViewController.swift in Sources */,
+				79A158732007CBDD006A8A1F /* SpeakersViewController+UITableView.swift in Sources */,
 				79A158252007AC80006A8A1F /* AppDelegate.swift in Sources */,
 				79A1585A2007B0B6006A8A1F /* Constants.swift in Sources */,
 				79A158622007B1CB006A8A1F /* SpeechModel.swift in Sources */,
@@ -449,8 +471,10 @@
 				79A158642007B273006A8A1F /* SpeechStore.swift in Sources */,
 				79A1586C2007BBDD006A8A1F /* BaseViewController.swift in Sources */,
 				79A158602007B161006A8A1F /* BaseModel.swift in Sources */,
+				79A158712007CAAF006A8A1F /* SpeakerTableViewCell.swift in Sources */,
 				79A1585D2007B0E8006A8A1F /* BaseStore.swift in Sources */,
 				79A1586E2007BC0F006A8A1F /* SpeakersViewController.swift in Sources */,
+				79A158772007DBCC006A8A1F /* String+Utils.swift in Sources */,
 				79A158692007B3AF006A8A1F /* SpeechDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

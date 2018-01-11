@@ -10,9 +10,22 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    //MARK: - Properties
+    var speechStore                     : SpeechStore = SpeechStore()
+    
+    
+    //MARK: - ViewController Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupView()
+    }
+    
     // MARK: - Utils
     func handleError(error: Error) {
         showMessage(message: error.localizedDescription)
+    }
+    func setupView() {
+        
     }
     
     private func showMessage(message: String) {
@@ -20,5 +33,6 @@ class BaseViewController: UIViewController {
         alertController.addAction(UIAlertAction.init(title: "OK", style: .cancel, handler: nil))
         present(alertController, animated: true, completion: nil)
     }
+    
 
 }
