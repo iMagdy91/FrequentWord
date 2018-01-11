@@ -29,9 +29,12 @@ class SpeechViewController: BaseViewController {
         super.setupView()
         title = speaker?.name
         speechTextView.text = speaker?.speech
-        speechTextView.setContentOffset(.zero, animated: false)
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        speechTextView.setContentOffset(.zero, animated: false)
+    }
     //MARK: - Private Methods
     private func calculateMostFrequentWord() {
         speechStore.getMostFrequentWordFromText(speaker?.speech, progress: { [weak self] (progress) in
