@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DCDEC96CA685A360DB7CAF5 /* Pods_FrequentWord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CC89B8D6EA1D9646EE9168 /* Pods_FrequentWord.framework */; };
 		79A158252007AC80006A8A1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158242007AC80006A8A1F /* AppDelegate.swift */; };
-		79A158272007AC80006A8A1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158262007AC80006A8A1F /* ViewController.swift */; };
 		79A1582A2007AC80006A8A1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A158282007AC80006A8A1F /* Main.storyboard */; };
 		79A1582C2007AC80006A8A1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79A1582B2007AC80006A8A1F /* Assets.xcassets */; };
 		79A1582F2007AC80006A8A1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79A1582D2007AC80006A8A1F /* LaunchScreen.storyboard */; };
 		79A1583A2007AC80006A8A1F /* FrequentWordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158392007AC80006A8A1F /* FrequentWordTests.swift */; };
 		79A158452007AC80006A8A1F /* FrequentWordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158442007AC80006A8A1F /* FrequentWordUITests.swift */; };
+		79A158572007AD7F006A8A1F /* speeches.json in Resources */ = {isa = PBXBuildFile; fileRef = 79A158562007AD7F006A8A1F /* speeches.json */; };
+		79A1585A2007B0B6006A8A1F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158592007B0B6006A8A1F /* Constants.swift */; };
+		79A1585D2007B0E8006A8A1F /* BaseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A1585C2007B0E8006A8A1F /* BaseStore.swift */; };
+		79A158602007B161006A8A1F /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A1585F2007B161006A8A1F /* BaseModel.swift */; };
+		79A158622007B1CB006A8A1F /* SpeechModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158612007B1CB006A8A1F /* SpeechModel.swift */; };
+		79A158642007B273006A8A1F /* SpeechStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158632007B273006A8A1F /* SpeechStore.swift */; };
+		79A158672007B35F006A8A1F /* SpeechDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158662007B35F006A8A1F /* SpeechDataProvider.swift */; };
+		79A158692007B3AF006A8A1F /* SpeechDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A158682007B3AF006A8A1F /* SpeechDataManager.swift */; };
+		79A1586C2007BBDD006A8A1F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A1586B2007BBDD006A8A1F /* BaseViewController.swift */; };
+		79A1586E2007BC0F006A8A1F /* SpeakersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A1586D2007BC0F006A8A1F /* SpeakersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28CC89B8D6EA1D9646EE9168 /* Pods_FrequentWord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrequentWord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A158212007AC80006A8A1F /* FrequentWord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FrequentWord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A158242007AC80006A8A1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79A158262007AC80006A8A1F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		79A158292007AC80006A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79A1582B2007AC80006A8A1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79A1582E2007AC80006A8A1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +57,18 @@
 		79A158402007AC80006A8A1F /* FrequentWordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FrequentWordUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A158442007AC80006A8A1F /* FrequentWordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequentWordUITests.swift; sourceTree = "<group>"; };
 		79A158462007AC80006A8A1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79A158562007AD7F006A8A1F /* speeches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = speeches.json; sourceTree = "<group>"; };
+		79A158592007B0B6006A8A1F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		79A1585C2007B0E8006A8A1F /* BaseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStore.swift; sourceTree = "<group>"; };
+		79A1585F2007B161006A8A1F /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		79A158612007B1CB006A8A1F /* SpeechModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechModel.swift; sourceTree = "<group>"; };
+		79A158632007B273006A8A1F /* SpeechStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechStore.swift; sourceTree = "<group>"; };
+		79A158662007B35F006A8A1F /* SpeechDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechDataProvider.swift; sourceTree = "<group>"; };
+		79A158682007B3AF006A8A1F /* SpeechDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechDataManager.swift; sourceTree = "<group>"; };
+		79A1586B2007BBDD006A8A1F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		79A1586D2007BC0F006A8A1F /* SpeakersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakersViewController.swift; sourceTree = "<group>"; };
+		C99A116B84A85F502D1774DF /* Pods-FrequentWord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrequentWord.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FrequentWord/Pods-FrequentWord.debug.xcconfig"; sourceTree = "<group>"; };
+		FE9D555FBA47052568412717 /* Pods-FrequentWord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrequentWord.release.xcconfig"; path = "Pods/Target Support Files/Pods-FrequentWord/Pods-FrequentWord.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DCDEC96CA685A360DB7CAF5 /* Pods_FrequentWord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +97,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D416EC8E70A3BCE2D24B39E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C99A116B84A85F502D1774DF /* Pods-FrequentWord.debug.xcconfig */,
+				FE9D555FBA47052568412717 /* Pods-FrequentWord.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		79A158182007AC80006A8A1F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +113,8 @@
 				79A158382007AC80006A8A1F /* FrequentWordTests */,
 				79A158432007AC80006A8A1F /* FrequentWordUITests */,
 				79A158222007AC80006A8A1F /* Products */,
+				2D416EC8E70A3BCE2D24B39E /* Pods */,
+				FA4A7CC02FB799B689CB8606 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +131,14 @@
 		79A158232007AC80006A8A1F /* FrequentWord */ = {
 			isa = PBXGroup;
 			children = (
-				79A158242007AC80006A8A1F /* AppDelegate.swift */,
-				79A158262007AC80006A8A1F /* ViewController.swift */,
-				79A158282007AC80006A8A1F /* Main.storyboard */,
-				79A1582B2007AC80006A8A1F /* Assets.xcassets */,
-				79A1582D2007AC80006A8A1F /* LaunchScreen.storyboard */,
-				79A158302007AC80006A8A1F /* Info.plist */,
+				79A1586A2007BBCE006A8A1F /* Controller */,
+				79A158652007B34B006A8A1F /* Data Provider */,
+				79A1585E2007B112006A8A1F /* Model */,
+				79A1585B2007B0C9006A8A1F /* Store */,
+				79A158582007B0A8006A8A1F /* Utils */,
+				79A158552007AD76006A8A1F /* Resourcres */,
+				79A158532007AD15006A8A1F /* View */,
+				79A158522007ACCD006A8A1F /* Supporting Files */,
 			);
 			path = FrequentWord;
 			sourceTree = "<group>";
@@ -125,6 +161,93 @@
 			path = FrequentWordUITests;
 			sourceTree = "<group>";
 		};
+		79A158522007ACCD006A8A1F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79A158242007AC80006A8A1F /* AppDelegate.swift */,
+				79A1582B2007AC80006A8A1F /* Assets.xcassets */,
+				79A1582D2007AC80006A8A1F /* LaunchScreen.storyboard */,
+				79A158302007AC80006A8A1F /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79A158532007AD15006A8A1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				79A158542007AD18006A8A1F /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		79A158542007AD18006A8A1F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				79A158282007AC80006A8A1F /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		79A158552007AD76006A8A1F /* Resourcres */ = {
+			isa = PBXGroup;
+			children = (
+				79A158562007AD7F006A8A1F /* speeches.json */,
+			);
+			path = Resourcres;
+			sourceTree = "<group>";
+		};
+		79A158582007B0A8006A8A1F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				79A158592007B0B6006A8A1F /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		79A1585B2007B0C9006A8A1F /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				79A1585C2007B0E8006A8A1F /* BaseStore.swift */,
+				79A158632007B273006A8A1F /* SpeechStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		79A1585E2007B112006A8A1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				79A1585F2007B161006A8A1F /* BaseModel.swift */,
+				79A158612007B1CB006A8A1F /* SpeechModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		79A158652007B34B006A8A1F /* Data Provider */ = {
+			isa = PBXGroup;
+			children = (
+				79A158662007B35F006A8A1F /* SpeechDataProvider.swift */,
+				79A158682007B3AF006A8A1F /* SpeechDataManager.swift */,
+			);
+			path = "Data Provider";
+			sourceTree = "<group>";
+		};
+		79A1586A2007BBCE006A8A1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				79A1586B2007BBDD006A8A1F /* BaseViewController.swift */,
+				79A1586D2007BC0F006A8A1F /* SpeakersViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA4A7CC02FB799B689CB8606 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28CC89B8D6EA1D9646EE9168 /* Pods_FrequentWord.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79A158492007AC80006A8A1F /* Build configuration list for PBXNativeTarget "FrequentWord" */;
 			buildPhases = (
+				166485A5F90EF690B5DB5D5C /* [CP] Check Pods Manifest.lock */,
 				79A1581D2007AC80006A8A1F /* Sources */,
 				79A1581E2007AC80006A8A1F /* Frameworks */,
 				79A1581F2007AC80006A8A1F /* Resources */,
+				D5EF99F3B463FC009586E9B9 /* [CP] Embed Pods Frameworks */,
+				07149CD1411A45CA46B7A3AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79A1582F2007AC80006A8A1F /* LaunchScreen.storyboard in Resources */,
+				79A158572007AD7F006A8A1F /* speeches.json in Resources */,
 				79A1582C2007AC80006A8A1F /* Assets.xcassets in Resources */,
 				79A1582A2007AC80006A8A1F /* Main.storyboard in Resources */,
 			);
@@ -254,13 +381,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07149CD1411A45CA46B7A3AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FrequentWord/Pods-FrequentWord-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		166485A5F90EF690B5DB5D5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FrequentWord-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5EF99F3B463FC009586E9B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FrequentWord/Pods-FrequentWord-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FrequentWord/Pods-FrequentWord-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		79A1581D2007AC80006A8A1F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79A158272007AC80006A8A1F /* ViewController.swift in Sources */,
 				79A158252007AC80006A8A1F /* AppDelegate.swift in Sources */,
+				79A1585A2007B0B6006A8A1F /* Constants.swift in Sources */,
+				79A158622007B1CB006A8A1F /* SpeechModel.swift in Sources */,
+				79A158672007B35F006A8A1F /* SpeechDataProvider.swift in Sources */,
+				79A158642007B273006A8A1F /* SpeechStore.swift in Sources */,
+				79A1586C2007BBDD006A8A1F /* BaseViewController.swift in Sources */,
+				79A158602007B161006A8A1F /* BaseModel.swift in Sources */,
+				79A1585D2007B0E8006A8A1F /* BaseStore.swift in Sources */,
+				79A1586E2007BC0F006A8A1F /* SpeakersViewController.swift in Sources */,
+				79A158692007B3AF006A8A1F /* SpeechDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,11 +615,13 @@
 		};
 		79A1584A2007AC80006A8A1F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C99A116B84A85F502D1774DF /* Pods-FrequentWord.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RBZ2UQ2323;
-				INFOPLIST_FILE = FrequentWord/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FrequentWord/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mohamed.FrequentWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,11 +632,13 @@
 		};
 		79A1584B2007AC80006A8A1F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE9D555FBA47052568412717 /* Pods-FrequentWord.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RBZ2UQ2323;
-				INFOPLIST_FILE = FrequentWord/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FrequentWord/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mohamed.FrequentWord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
